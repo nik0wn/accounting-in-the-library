@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.curs0.AddbooksController">
   <tabs>
     <Tab text="Библеотека ИжГТУ">
       <content>
@@ -18,29 +18,29 @@
                <children>
                   <VBox layoutX="486.0" layoutY="-1.0" prefHeight="372.0" prefWidth="113.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Книги">
+                        <Button fx:id="books" mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Книги">
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Добавить книгу">
+                        <Button fx:id="addbooks" mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Добавить книгу">
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
                         </Button>
                         <ImageView fitHeight="183.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true" />
-                        <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Абонименты" />
-                        <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Добавить читателя" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="seasontickets" mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Абонименты" />
+                        <Button fx:id="readeradd" mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Добавить читателя" textAlignment="CENTER" wrapText="true" />
                      </children>
                   </VBox>
                   <HBox layoutX="14.0" layoutY="14.0" prefHeight="68.0" prefWidth="463.0">
                      <children>
-                        <TextField promptText="Название книги ">
+                        <TextField fx:id="namebook" promptText="Название книги ">
                            <HBox.margin>
                               <Insets top="7.0" />
                            </HBox.margin>
                         </TextField>
-                        <TextField promptText="Автор книги">
+                        <TextField fx:id="authorbook" promptText="Автор книги">
                            <HBox.margin>
                               <Insets left="140.0" top="7.0" />
                            </HBox.margin>
@@ -49,12 +49,12 @@
                   </HBox>
                   <HBox layoutX="14.0" layoutY="82.0" prefHeight="68.0" prefWidth="463.0">
                      <children>
-                        <TextField promptText="Тематика книги">
+                        <TextField fx:id="topics" promptText="Тематика книги">
                            <HBox.margin>
                               <Insets top="7.0" />
                            </HBox.margin>
                         </TextField>
-                        <TextField promptText="Год издания">
+                        <TextField fx:id="yearofpublishing" promptText="Год издания">
                            <HBox.margin>
                               <Insets left="140.0" top="7.0" />
                            </HBox.margin>
@@ -63,89 +63,21 @@
                   </HBox>
                   <HBox layoutX="14.0" layoutY="151.0" prefHeight="68.0" prefWidth="463.0">
                      <children>
-                        <TextField promptText="Издатель">
+                        <TextField fx:id="publisher" promptText="Издатель">
                            <HBox.margin>
                               <Insets top="7.0" />
                            </HBox.margin>
                         </TextField>
-                        <TextField promptText="Количество книг">
+                        <TextField fx:id="quantity" promptText="Количество книг">
                            <HBox.margin>
                               <Insets left="140.0" top="7.0" />
                            </HBox.margin>
                         </TextField>
                      </children>
                   </HBox>
-                  <Button layoutX="184.0" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" text="Добавить книгу" />
+                  <Button fx:id="add" layoutX="184.0" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" text="Добавить" />
                </children></AnchorPane>
       </content>
     </Tab>
-      <Tab text="Библеотека УдГУ">
-         <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <VBox layoutX="486.0" layoutY="-1.0" prefHeight="372.0" prefWidth="113.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Книги">
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </Button>
-                        <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Добавить книгу">
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </Button>
-                        <ImageView fitHeight="183.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true" />
-                        <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Абонименты" />
-                        <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Добавить читателя" textAlignment="CENTER" wrapText="true" />
-                     </children>
-                  </VBox>
-                  <HBox layoutX="14.0" layoutY="14.0" prefHeight="68.0" prefWidth="463.0">
-                     <children>
-                        <TextField promptText="Название книги ">
-                           <HBox.margin>
-                              <Insets top="7.0" />
-                           </HBox.margin>
-                        </TextField>
-                        <TextField promptText="Автор книги">
-                           <HBox.margin>
-                              <Insets left="140.0" top="7.0" />
-                           </HBox.margin>
-                        </TextField>
-                     </children>
-                  </HBox>
-                  <HBox layoutX="14.0" layoutY="82.0" prefHeight="68.0" prefWidth="463.0">
-                     <children>
-                        <TextField promptText="Тематика книги">
-                           <HBox.margin>
-                              <Insets top="7.0" />
-                           </HBox.margin>
-                        </TextField>
-                        <TextField promptText="Год издания">
-                           <HBox.margin>
-                              <Insets left="140.0" top="7.0" />
-                           </HBox.margin>
-                        </TextField>
-                     </children>
-                  </HBox>
-                  <HBox layoutX="14.0" layoutY="151.0" prefHeight="68.0" prefWidth="463.0">
-                     <children>
-                        <TextField promptText="Издатель">
-                           <HBox.margin>
-                              <Insets top="7.0" />
-                           </HBox.margin>
-                        </TextField>
-                        <TextField promptText="Количество книг">
-                           <HBox.margin>
-                              <Insets left="140.0" top="7.0" />
-                           </HBox.margin>
-                        </TextField>
-                     </children>
-                  </HBox>
-                  <Button layoutX="184.0" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" text="Добавить книгу" />
-               </children>
-            </AnchorPane>
-         </content>
-      </Tab>
   </tabs>
 </TabPane>

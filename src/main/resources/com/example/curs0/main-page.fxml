@@ -34,30 +34,5 @@
                </children></AnchorPane>
       </content>
     </Tab>
-      <Tab text="Библеотека УдГУ">
-         <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <VBox layoutX="486.0" layoutY="-1.0" prefHeight="372.0" prefWidth="113.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Книги">
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </Button>
-                        <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Добавить книгу">
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </Button>
-                        <ImageView fitHeight="183.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true" />
-                        <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Абонименты" />
-                        <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Добавить читателя" textAlignment="CENTER" wrapText="true" />
-                     </children>
-                  </VBox>
-               </children>
-            </AnchorPane>
-         </content>
-      </Tab>
   </tabs>
 </TabPane>
