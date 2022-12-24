@@ -2,6 +2,7 @@ package com.example.curs0;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class BDconn {
@@ -38,4 +39,28 @@ public class BDconn {
                 "values (10842021,\"public\".id_title_topic('%s'),'%s', '%s','%s','%d',%d)", topic, author, name_books,publishers, year_book, quantity_book);
         statement.executeUpdate(SQL_INSERT);
             }
+    public static ResultSet search_namebook(String namebooks) throws Exception{
+        Statement statement = connection.createStatement();
+        String SQL_SELECT = String.format("select name_books, title_topics, author,quantity_books\n" +
+                "from \"public\".books\n" +
+                "inner join \"public\".topics on id_topics = \"public\".topics.\"id\" \n" +
+                "where name_books = '%s'", namebooks);
+        return statement.executeQuery(SQL_SELECT);
+    }
+    public static ResultSet search_author(String author) throws Exception{
+        Statement statement = connection.createStatement();
+        String SQL_SELECT = String.format("select name_books, title_topics, author,quantity_books\n" +
+                "from \"public\".books\n" +
+                "inner join \"public\".topics on id_topics = \"public\".topics.\"id\" \n" +
+                "where author = '%s'", author);
+        return statement.executeQuery(SQL_SELECT);
+    }
+    public static ResultSet search_namebookAndAuthor(String namebooks,String author) throws Exception{
+        Statement statement = connection.createStatement();
+        String SQL_SELECT = String.format("select name_books, title_topics, author,quantity_books\n" +
+                "from \"public\".books\n" +
+                "inner join \"public\".topics on id_topics = \"public\".topics.\"id\" \n" +
+                "where author = '%s' and name_books = '%s'", author, namebooks);
+       return statement.executeQuery(SQL_SELECT);
+    }
 }

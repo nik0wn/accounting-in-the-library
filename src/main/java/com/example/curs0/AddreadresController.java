@@ -46,7 +46,6 @@ public class AddreadresController{
     private String name;
     private String adress;
     private String phone;
-
     @FXML
     void initialize() {
         // добваление ижгту

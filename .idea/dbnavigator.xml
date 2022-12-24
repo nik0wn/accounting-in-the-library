@@ -35,7 +35,27 @@ from "public".topics
 where title_topics = 'Программироване'
 
 insert into public.books (id_libraries,id_topics,author,name_books,publishers,year_books,quantity_books) 
-values (10842021,"public".id_title_topic('Программирование'),'test', 'tets','test','2022',2)]]></console>
+values (10842021,"public".id_title_topic('Программирование'),'Денис пора учить', 'Javascript','test','2021',2)
+
+-- поиск книг
+select * from "public".books
+-- поиск по название книге
+select name_books, title_topics, author,quantity_books
+from "public".books
+inner join "public".topics on id_topics = "public".topics."id" 
+where name_books = 'Javascript'
+
+-- поиск по автору 
+select name_books, title_topics, author,quantity_books
+from "public".books
+inner join "public".topics on id_topics = "public".topics."id" 
+where author = 'пушкин'
+
+-- поиск по автору и книге 
+select name_books, title_topics, author,quantity_books
+from "public".books
+inner join "public".topics on id_topics = "public".topics."id" 
+where author = 'пушкин' and name_books = 'Тест']]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -53,6 +73,9 @@ values (10842021,"public".id_title_topic('Программирование'),'te
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
     <filters />
+  </component>
+  <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
+    <recently-used-interfaces />
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>

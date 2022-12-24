@@ -11,7 +11,7 @@ import java.sql.Connection;
 public class main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(main.class.getResource("add-books.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(main.class.getResource("books-search.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         stage.setTitle("Hello!");
         stage.setScene(scene);
