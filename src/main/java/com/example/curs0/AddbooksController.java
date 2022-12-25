@@ -1,22 +1,25 @@
 package com.example.curs0;
 
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class AddbooksController {
     @FXML
     private Button add;
-
-    @FXML
-    private Button addbooks;
 
     @FXML
     private TextField authorbook;
@@ -52,8 +55,19 @@ public class AddbooksController {
    private int year_book;
    private int quantity_book;
 
+   public void booksbt() throws  Exception{
+       Parent root = FXMLLoader.load(getClass().getResource("books-search.fxml"));
+       Stage window = (Stage) books.getScene().getWindow();
+       window.setScene(new Scene(root, 600,400));
+   }
+   public void readeraddbt() throws Exception{
+       Parent root = FXMLLoader.load(getClass().getResource("add-readres.fxml"));
+       Stage window = (Stage) readeradd.getScene().getWindow();
+       window.setScene(new Scene(root, 600,400));
+   }
     @FXML
     void initialize() {
+
         namebook.setOnKeyTyped(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent keyEvent) {

@@ -5,10 +5,15 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 
 public class BookssearchController {
@@ -53,6 +58,17 @@ public class BookssearchController {
 
     private String searchauthors = "";
     private String searchbooknames = "";
+
+    public void readeraddbt() throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("add-readres.fxml"));
+        Stage window = (Stage) readeradd.getScene().getWindow();
+        window.setScene(new Scene(root, 600,400));
+    }
+    public void addbooksbt() throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("add-books.fxml"));
+        Stage window = (Stage) addbooks.getScene().getWindow();
+        window.setScene(new Scene(root, 600,400));
+    }
     @FXML
     void initialize(){
     searchauthor.setOnKeyTyped(new EventHandler<KeyEvent>() {
