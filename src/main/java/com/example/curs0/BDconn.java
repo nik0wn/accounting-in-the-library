@@ -1,5 +1,7 @@
 package com.example.curs0;
 
+import javafx.scene.control.Alert;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -62,5 +64,26 @@ public class BDconn {
                 "inner join \"public\".topics on id_topics = \"public\".topics.\"id\" \n" +
                 "where author = '%s' and name_books = '%s'", author, namebooks);
        return statement.executeQuery(SQL_SELECT);
+    }
+    public static void test (String namebooks, String nameuser) throws Exception{
+        int number_colum = 0;
+        Statement statement = connection.createStatement();
+        String SQL_SELECT_COUNT = String.format("select COUNT(*) from \"public\".books\n" +
+                "where name_books = '%s' and quantity_books > 0", namebooks);
+        String SQL_Insert = String.format("insert into public.season_ticket (id_libraries, id_books,id_readers , date_of_issue) values\n" +
+                "(10842021,public.id_books('%s'),public.id_readers('%s'),now())", namebooks,nameuser);
+        String SQL_Update = String.format("update public.books\n" +
+                "set quantity_books = quantity_books - 1\n" +
+                "where id = public.id_books('%s')", namebooks);
+        ResultSet number = statement.executeQuery(SQL_SELECT_COUNT);
+        if (number.next()){
+        number_colum = number.getInt(1);
+        }
+        if (number_colum >= 1){
+            statement.executeUpdate(SQL_Insert);
+            statement.executeUpdate(SQL_Update);
+        } else {
+            System.out.println("количество книг меньше нуля");
+        }
     }
 }

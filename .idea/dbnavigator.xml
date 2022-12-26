@@ -55,7 +55,24 @@ where author = 'пушкин'
 select name_books, title_topics, author,quantity_books
 from "public".books
 inner join "public".topics on id_topics = "public".topics."id" 
-where author = 'пушкин' and name_books = 'Тест']]></console>
+where author = 'пушкин' and name_books = 'Тест'
+-- абонимент 
+insert into public.season_ticket (id_libraries, id_books,id_readers , date_of_issue) values
+(10842021,public.id_books('Война и мир'),public.id_readers('Сальников Никита Денисович'),now())
+
+select * from "public".season_ticket
+
+select * from "public".books
+where name_books = 'Война и мир' and quantity_books > 0
+
+update public.books
+set quantity_books = quantity_books + 2
+where id = '11'
+
+select * from "public".books
+
+select COUNT(*) from "public".books
+where name_books = 'Война и мир' and quantity_books > 0]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">

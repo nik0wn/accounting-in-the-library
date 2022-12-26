@@ -18,8 +18,9 @@ public class main extends Application {
         stage.show();
     }
 
-    public static void main(String[] args) {
-        BDconn.conect();
-        launch();
+    public static void main(String[] args) throws Exception {
+      BDconn.conect();
+      BDconn.test("Война и мир", "Сальников Никита Денисович");
+       launch();
     }
 }
