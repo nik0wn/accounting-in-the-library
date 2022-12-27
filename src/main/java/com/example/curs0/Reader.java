@@ -1,10 +1,15 @@
 package com.example.curs0;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.control.Button;
+
 public class Reader {
     private String namebook;
     private String nameuser;
     private String dateissue;
     private String datareturn;
+    private Button returnButton;
 
     public Reader(String namebook, String nameuser, String dateissue, String datareturn){
         this.namebook = namebook;
@@ -44,4 +49,12 @@ public class Reader {
     public void setDatareturn(String datareturn) {
         this.datareturn = datareturn;
     }
-}
+
+    public void setReturnButton(Button returnButton) {
+        this.returnButton = returnButton;
+    }
+
+    public Button getReturnButton() {
+        return returnButton;
+    }
+    }

@@ -8,7 +8,7 @@
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
-    <show-object-properties value="true" />
+    <show-object-properties value="false" />
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
@@ -66,6 +66,10 @@ from "public".season_ticket
 inner join "public".readers on id_readers = "public".readers."id"
 inner join "public".books on id_books = "public".books."id"
 where name_readers = 'Сальников Никита Денисович'
+-- возврат книги
+update "public".season_ticket
+set date_return = now()
+where id_books = public.id_books('Тест') and id_readers = public.id_readers('Сальников Никита Денисович')
 
 select * from "public".season_ticket
 

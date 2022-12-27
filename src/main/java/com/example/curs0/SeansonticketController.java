@@ -49,6 +49,9 @@ public class SeansonticketController {
     private TableColumn<Reader, String> dateissueColumn;
 
     @FXML
+    private TableColumn <Reader, Button> returnColumn;
+
+    @FXML
     private TextField nameuserText;
 
     private String nameuser;
@@ -78,6 +81,7 @@ public class SeansonticketController {
 
     @FXML
     void initialize() {
+
         nameuserText.setOnKeyTyped(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent keyEvent) {
@@ -106,6 +110,7 @@ public class SeansonticketController {
                 nameuserColumn.setCellValueFactory(new PropertyValueFactory<>("nameuser"));
                 dateissueColumn.setCellValueFactory(new PropertyValueFactory<>("dateissue"));
                 datareturnColumn.setCellValueFactory(new PropertyValueFactory<>("datareturn"));
+                returnColumn.setCellValueFactory(new PropertyValueFactory<>("returnButton"));
                 searchTable.setItems(readerObservableList);
             }
         });
