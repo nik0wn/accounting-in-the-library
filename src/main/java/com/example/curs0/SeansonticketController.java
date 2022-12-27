@@ -34,6 +34,9 @@ public class SeansonticketController {
     private Button readeraddButton;
 
     @FXML
+    private Button returnButton;
+
+    @FXML
     private TableView<Reader> searchTable;
 
     @FXML
@@ -76,6 +79,11 @@ public class SeansonticketController {
         Stage window = (Stage) issueButton.getScene().getWindow();
         window.setScene(new Scene(root, 600,400));
     }
+    public void returnbt() throws  Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("return-season-ticket.fxml"));
+        Stage window = (Stage) returnButton.getScene().getWindow();
+        window.setScene(new Scene(root, 600,400));
+    }
 
     ObservableList <Reader> readerObservableList = FXCollections.observableArrayList();
 
@@ -116,5 +124,3 @@ public class SeansonticketController {
         });
     }
     }
-
-

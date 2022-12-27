@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2edf679-c6f0-40ee-83d2-ec8a41ca705a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/curs0/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/curs0/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/curs0/BDconn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/curs0/BDconn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/curs0/SeansonticketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/curs0/SeansonticketController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/curs0/season-ticket.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/curs0/season-ticket.fxml" afterDir="false" />
     </list>
@@ -58,7 +57,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "openjdk-19",
-    "last_opened_file_path": "C:/Users/nekit/Downloads/postgresql-42.5.1.jar",
+    "last_opened_file_path": "E:/Учеба/Бд/src/main/resources/com/example/curs0",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",

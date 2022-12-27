@@ -96,4 +96,12 @@ public class BDconn {
             System.out.println("количество книг меньше нуля");
         }
     }
+    public static void update_season_ticket(String namebooks, String nameuser) throws Exception{ // добавление данных
+        Statement statement = connection.createStatement();
+        String SQL_INSERT = String.format("");
+        String SQL_Update = String.format("update public.books\n" +
+                "set quantity_books = quantity_books + 1\n" +
+                "where id = public.id_books('%s')", namebooks);
+        statement.executeUpdate(SQL_INSERT);
+    }
 }
