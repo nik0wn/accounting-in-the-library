@@ -65,7 +65,17 @@ public class BDconn {
                 "where author = '%s' and name_books = '%s'", author, namebooks);
        return statement.executeQuery(SQL_SELECT);
     }
-    public static void test (String namebooks, String nameuser) throws Exception{
+
+    public static ResultSet search_season_ticket (String nameuser) throws Exception{
+        Statement statement = connection.createStatement();
+        String SQL_SELECT = String.format("select name_books,name_readers,date_of_issue, date_return\n" +
+                "from \"public\".season_ticket\n" +
+                "inner join \"public\".readers on id_readers = \"public\".readers.\"id\"\n" +
+                "inner join \"public\".books on id_books = \"public\".books.\"id\"\n" +
+                "where name_readers = '%s'", nameuser);
+        return statement.executeQuery(SQL_SELECT);
+    }
+    public static void insert_season_ticket (String namebooks, String nameuser) throws Exception{
         int number_colum = 0;
         Statement statement = connection.createStatement();
         String SQL_SELECT_COUNT = String.format("select COUNT(*) from \"public\".books\n" +
@@ -86,5 +96,4 @@ public class BDconn {
             System.out.println("количество книг меньше нуля");
         }
     }
-
 }

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.curs0.BookssearchController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.curs0.IssueseasonticketController">
   <tabs>
     <Tab text="Библеотека ИжГТУ">
       <content>
@@ -16,7 +16,7 @@
                <children>
                   <VBox layoutX="122.0" layoutY="14.0" prefHeight="94.0" prefWidth="328.0">
                      <children>
-                        <TextField fx:id="nemauserText" promptText="ФИО" />
+                        <TextField fx:id="nameuserText" promptText="ФИО" />
                         <TextField fx:id="namebookText" promptText="Название книги">
                            <VBox.margin>
                               <Insets top="40.0" />
@@ -25,7 +25,7 @@
                      </children>
                   </VBox>
                   <Button fx:id="addButton" layoutX="234.0" layoutY="161.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Добавить" />
-                  <Button fx:id="backButton" layoutX="234.0" layoutY="259.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Назад" />
+                  <Button fx:id="backButton" layoutX="234.0" layoutY="259.0" mnemonicParsing="false" onAction="#backbt" prefHeight="25.0" prefWidth="104.0" text="Назад" />
                </children></AnchorPane>
       </content>
     </Tab>

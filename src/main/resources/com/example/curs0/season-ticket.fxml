@@ -19,19 +19,19 @@
                <children>
                   <VBox layoutX="486.0" layoutY="-1.0" prefHeight="372.0" prefWidth="113.0">
                      <children>
-                        <Button fx:id="booksButton" mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Книги">
+                        <Button fx:id="booksButton" mnemonicParsing="false" onAction="#booksbt" prefHeight="48.0" prefWidth="127.0" text="Книги">
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
                         </Button>
-                        <Button fx:id="addbooksButton" mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Добавить книгу">
+                        <Button fx:id="addbooksButton" mnemonicParsing="false" onAction="#addbooksbt" prefHeight="48.0" prefWidth="127.0" text="Добавить книгу">
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
                         </Button>
                         <ImageView fitHeight="183.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true" />
                         <Button fx:id="seasonticketsButton" mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Абонименты" />
-                        <Button fx:id="readeraddButton" mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Добавить читателя" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="readeraddButton" mnemonicParsing="false" onAction="#readeraddbt" prefHeight="48.0" prefWidth="127.0" text="Добавить читателя" textAlignment="CENTER" wrapText="true" />
                      </children>
                   </VBox>
                   <VBox layoutX="14.0" layoutY="7.0" prefHeight="112.0" prefWidth="296.0">
@@ -58,7 +58,7 @@
                   </TableView>
                   <VBox layoutX="348.0" layoutY="39.0" prefHeight="49.0" prefWidth="100.0">
                      <children>
-                        <Button fx:id="issueButton" mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Выдать" />
+                        <Button fx:id="issueButton" mnemonicParsing="false" onAction="#issuebt" prefHeight="48.0" prefWidth="127.0" text="Выдать" />
                      </children>
                   </VBox>
                </children></AnchorPane>

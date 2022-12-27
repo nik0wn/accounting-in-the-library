@@ -56,9 +56,16 @@ select name_books, title_topics, author,quantity_books
 from "public".books
 inner join "public".topics on id_topics = "public".topics."id" 
 where author = 'пушкин' and name_books = 'Тест'
+
 -- абонимент 
 insert into public.season_ticket (id_libraries, id_books,id_readers , date_of_issue) values
 (10842021,public.id_books('Война и мир'),public.id_readers('Сальников Никита Денисович'),now())
+
+select name_books,name_readers,date_of_issue, date_return
+from "public".season_ticket
+inner join "public".readers on id_readers = "public".readers."id"
+inner join "public".books on id_books = "public".books."id"
+where name_readers = 'Сальников Никита Денисович'
 
 select * from "public".season_ticket
 

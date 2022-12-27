@@ -30,7 +30,7 @@
                            </VBox.margin>
                         </Button>
                         <ImageView fitHeight="183.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true" />
-                        <Button fx:id="seasontickets" mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Абонименты" />
+                        <Button fx:id="seasontickets" mnemonicParsing="false" onAction="#seasonticketsbt" prefHeight="48.0" prefWidth="127.0" text="Абонименты" />
                         <Button fx:id="readeradd" mnemonicParsing="false" onAction="#readeraddbt" prefHeight="48.0" prefWidth="127.0" text="Добавить читателя" textAlignment="CENTER" wrapText="true" />
                      </children>
                   </VBox>
