@@ -10,72 +10,72 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.curs0.AddbooksController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.curs0.AddbooksController">
   <tabs>
     <Tab text="Библеотека ИжГТУ">
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <VBox layoutX="486.0" layoutY="-1.0" prefHeight="372.0" prefWidth="113.0">
+                  <VBox layoutX="727.0" layoutY="-1.0" prefHeight="564.0" prefWidth="161.0">
                      <children>
-                        <Button fx:id="books" mnemonicParsing="false" onAction="#booksbt" prefHeight="48.0" prefWidth="127.0" text="Книги">
+                        <Button fx:id="books" mnemonicParsing="false" onAction="#booksbt" prefHeight="48.0" prefWidth="161.0" text="Книги">
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
                         </Button>
-                        <Button fx:id="addbooks" mnemonicParsing="false" prefHeight="48.0" prefWidth="127.0" text="Добавить книгу">
+                        <Button fx:id="addbooks" mnemonicParsing="false" prefHeight="48.0" prefWidth="161.0" text="Добавить книгу">
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
                         </Button>
-                        <ImageView fitHeight="183.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true" />
-                        <Button fx:id="seasontickets" mnemonicParsing="false" onAction="#seasonticketsbt" prefHeight="48.0" prefWidth="127.0" text="Абонименты" />
-                        <Button fx:id="readeradd" mnemonicParsing="false" onAction="#readeraddbt" prefHeight="48.0" prefWidth="127.0" text="Добавить читателя" textAlignment="CENTER" wrapText="true" />
+                        <ImageView fitHeight="371.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button fx:id="seasontickets" mnemonicParsing="false" onAction="#seasonticketsbt" prefHeight="48.0" prefWidth="170.0" text="Абонименты" />
+                        <Button fx:id="readeradd" mnemonicParsing="false" onAction="#readeraddbt" prefHeight="48.0" prefWidth="167.0" text="Добавить читателя" textAlignment="CENTER" wrapText="true" />
                      </children>
                   </VBox>
-                  <HBox layoutX="14.0" layoutY="14.0" prefHeight="68.0" prefWidth="463.0">
+                  <HBox layoutX="14.0" layoutY="14.0" prefHeight="68.0" prefWidth="682.0">
                      <children>
-                        <TextField fx:id="namebook" promptText="Название книги ">
+                        <TextField fx:id="namebook" prefHeight="25.0" prefWidth="230.0" promptText="Название книги ">
                            <HBox.margin>
                               <Insets top="7.0" />
                            </HBox.margin>
                         </TextField>
-                        <TextField fx:id="authorbook" promptText="Автор книги">
+                        <TextField fx:id="authorbook" prefHeight="25.0" prefWidth="230.0" promptText="Автор книги">
                            <HBox.margin>
                               <Insets left="140.0" top="7.0" />
                            </HBox.margin>
                         </TextField>
                      </children>
                   </HBox>
-                  <HBox layoutX="14.0" layoutY="82.0" prefHeight="68.0" prefWidth="463.0">
+                  <HBox layoutX="14.0" layoutY="82.0" prefHeight="68.0" prefWidth="680.0">
                      <children>
-                        <TextField fx:id="topics" promptText="Тематика книги">
+                        <TextField fx:id="topics" prefHeight="25.0" prefWidth="230.0" promptText="Тематика книги">
                            <HBox.margin>
                               <Insets top="7.0" />
                            </HBox.margin>
                         </TextField>
-                        <TextField fx:id="yearofpublishing" promptText="Год издания">
+                        <TextField fx:id="yearofpublishing" prefHeight="25.0" prefWidth="230.0" promptText="Год издания">
                            <HBox.margin>
                               <Insets left="140.0" top="7.0" />
                            </HBox.margin>
                         </TextField>
                      </children>
                   </HBox>
-                  <HBox layoutX="14.0" layoutY="151.0" prefHeight="68.0" prefWidth="463.0">
+                  <HBox layoutX="14.0" layoutY="151.0" prefHeight="68.0" prefWidth="703.0">
                      <children>
-                        <TextField fx:id="publisher" promptText="Издатель">
+                        <TextField fx:id="publisher" prefHeight="25.0" prefWidth="230.0" promptText="Издатель">
                            <HBox.margin>
                               <Insets top="7.0" />
                            </HBox.margin>
                         </TextField>
-                        <TextField fx:id="quantity" promptText="Количество книг">
+                        <TextField fx:id="quantity" prefHeight="25.0" prefWidth="230.0" promptText="Количество книг">
                            <HBox.margin>
                               <Insets left="140.0" top="7.0" />
                            </HBox.margin>
                         </TextField>
                      </children>
                   </HBox>
-                  <Button fx:id="add" layoutX="184.0" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" text="Добавить" />
+                  <Button fx:id="add" layoutX="285.0" layoutY="273.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" text="Добавить" />
                </children></AnchorPane>
       </content>
     </Tab>

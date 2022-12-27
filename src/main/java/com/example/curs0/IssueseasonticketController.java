@@ -32,7 +32,7 @@ public class IssueseasonticketController {
     public void backbt() throws  Exception{
         Parent root = FXMLLoader.load(getClass().getResource("season-ticket.fxml"));
         Stage window = (Stage) backButton.getScene().getWindow();
-        window.setScene(new Scene(root, 600,400));
+        window.setScene(new Scene(root, 900,600));
     }
 
     @FXML
@@ -55,7 +55,10 @@ public class IssueseasonticketController {
                 try {
                     BDconn.insert_season_ticket(namebook,nameuser);
                 } catch (Exception e){
-                    System.out.println("qwq");
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Ошибка");
+                    alert.setHeaderText("Неверно заполнены данные");
+                    alert.showAndWait();
                 }
             }
         });

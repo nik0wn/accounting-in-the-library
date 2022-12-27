@@ -101,7 +101,10 @@ public class BookssearchController {
                                     value.getInt("quantity_books")));
                         }
                     } catch (Exception e){
-                        System.out.println("Ошибка 1");
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setTitle("Ошибка");
+                        alert.setHeaderText("Неверно заполнены данные");
+                        alert.showAndWait();
                     }
                 }
                 else if(searchbooknames.length() == 0 && searchauthors.length() >= 1){
@@ -113,7 +116,10 @@ public class BookssearchController {
                                     value.getInt("quantity_books")));
                         }
                     } catch (Exception e){
-                        System.out.println("Ошибка 2");
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setTitle("Ошибка");
+                        alert.setHeaderText("Неверно заполнены данные");
+                        alert.showAndWait();
                     }
                 }
                 else if (searchbooknames.length() >= 1 && searchauthors.length() >= 1) {
@@ -125,7 +131,10 @@ public class BookssearchController {
                                     value.getInt("quantity_books")));
                         }
                     }catch (Exception e){
-                        System.out.println("Ошибка 3");
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setTitle("Ошибка");
+                        alert.setHeaderText("Неверно заполнены данные");
+                        alert.showAndWait();
                     }
                 }
                 namebookColumn.setCellValueFactory(new PropertyValueFactory<>("namebook"));

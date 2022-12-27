@@ -58,17 +58,17 @@ public class AddbooksController {
    public void booksbt() throws  Exception{
        Parent root = FXMLLoader.load(getClass().getResource("books-search.fxml"));
        Stage window = (Stage) books.getScene().getWindow();
-       window.setScene(new Scene(root, 600,400));
+       window.setScene(new Scene(root, 900,600));
    }
    public void readeraddbt() throws Exception{
        Parent root = FXMLLoader.load(getClass().getResource("add-readres.fxml"));
        Stage window = (Stage) readeradd.getScene().getWindow();
-       window.setScene(new Scene(root, 600,400));
+       window.setScene(new Scene(root, 900,600));
    }
     public void seasonticketsbt() throws  Exception{
         Parent root = FXMLLoader.load(getClass().getResource("season-ticket.fxml"));
         Stage window = (Stage) seasontickets.getScene().getWindow();
-        window.setScene(new Scene(root, 600,400));
+        window.setScene(new Scene(root, 900,600));
     }
     @FXML
     void initialize() {

@@ -56,17 +56,17 @@ public class SeansonticketController {
     public void addbooksbt() throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("add-books.fxml"));
         Stage window = (Stage) addbooksButton.getScene().getWindow();
-        window.setScene(new Scene(root, 600,400));
+        window.setScene(new Scene(root, 900,600));
     }
     public void readeraddbt() throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("add-readres.fxml"));
         Stage window = (Stage) readeraddButton.getScene().getWindow();
-        window.setScene(new Scene(root, 600,400));
+        window.setScene(new Scene(root, 900,600));
     }
     public void booksbt() throws  Exception{
         Parent root = FXMLLoader.load(getClass().getResource("books-search.fxml"));
         Stage window = (Stage) booksButton.getScene().getWindow();
-        window.setScene(new Scene(root, 600,400));
+        window.setScene(new Scene(root, 900,600));
     }
     public void issuebt() throws  Exception{
         Parent root = FXMLLoader.load(getClass().getResource("issue-season-ticket.fxml"));
@@ -97,7 +97,10 @@ public class SeansonticketController {
                                 value.getString("date_of_issue"),value.getString("date_return")));
                     }
                 } catch (Exception e){
-                    System.out.println("");
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Ошибка");
+                    alert.setHeaderText("Неверно заполнены данные");
+                    alert.showAndWait();
                 }
                 namebookColumn.setCellValueFactory(new PropertyValueFactory<>("namebook"));
                 nameuserColumn.setCellValueFactory(new PropertyValueFactory<>("nameuser"));
