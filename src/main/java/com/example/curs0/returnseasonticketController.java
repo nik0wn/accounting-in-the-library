@@ -53,7 +53,7 @@ public class returnseasonticketController {
             @Override
             public void handle(ActionEvent actionEvent) {
                 try {
-                    BDconn.insert_season_ticket(namebook,nameuser);
+                    BDconn.update_season_ticket(namebook,nameuser);
                 } catch (Exception e){
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("Ошибка");

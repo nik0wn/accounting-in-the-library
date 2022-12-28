@@ -51,8 +51,6 @@ public class SeansonticketController {
     @FXML
     private TableColumn<Reader, String> dateissueColumn;
 
-    @FXML
-    private TableColumn <Reader, Button> returnColumn;
 
     @FXML
     private TextField nameuserText;
@@ -97,6 +95,20 @@ public class SeansonticketController {
             }
         });
 
+        try {
+            ResultSet value = BDconn.season_ticket();
+            while (value.next()){
+                readerObservableList.add(new Reader(value.getString("name_books"),value.getString("name_readers"),
+                        value.getString("date_of_issue"),value.getString("date_return")));
+            }
+            namebookColumn.setCellValueFactory(new PropertyValueFactory<>("namebook"));
+            nameuserColumn.setCellValueFactory(new PropertyValueFactory<>("nameuser"));
+            dateissueColumn.setCellValueFactory(new PropertyValueFactory<>("dateissue"));
+            datareturnColumn.setCellValueFactory(new PropertyValueFactory<>("datareturn"));
+            searchTable.setItems(readerObservableList);
+        } catch (Exception e) {
+
+        }
         nameuserButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -118,7 +130,6 @@ public class SeansonticketController {
                 nameuserColumn.setCellValueFactory(new PropertyValueFactory<>("nameuser"));
                 dateissueColumn.setCellValueFactory(new PropertyValueFactory<>("dateissue"));
                 datareturnColumn.setCellValueFactory(new PropertyValueFactory<>("datareturn"));
-                returnColumn.setCellValueFactory(new PropertyValueFactory<>("returnButton"));
                 searchTable.setItems(readerObservableList);
             }
         });

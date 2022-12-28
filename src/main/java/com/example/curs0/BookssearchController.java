@@ -62,17 +62,17 @@ public class BookssearchController {
     public void readeraddbt() throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("add-readres.fxml"));
         Stage window = (Stage) readeradd.getScene().getWindow();
-        window.setScene(new Scene(root, 600,400));
+        window.setScene(new Scene(root, 900,600));
     }
     public void addbooksbt() throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("add-books.fxml"));
         Stage window = (Stage) addbooks.getScene().getWindow();
-        window.setScene(new Scene(root, 600,400));
+        window.setScene(new Scene(root, 900,600));
     }
     public void seasonticketsbt() throws  Exception{
         Parent root = FXMLLoader.load(getClass().getResource("season-ticket.fxml"));
         Stage window = (Stage) seasontickets.getScene().getWindow();
-        window.setScene(new Scene(root, 600,400));
+        window.setScene(new Scene(root, 900,600));
     }
     @FXML
     void initialize(){
@@ -88,7 +88,25 @@ public class BookssearchController {
             searchbooknames = searchbookname.getText();
         }
     });
-    find.setOnAction(new EventHandler<ActionEvent>() {
+
+        try {
+            ResultSet value = BDconn.search();
+            while (value.next()){
+                booksObservableList.add(new Books(value.getString("name_books"),
+                        value.getString("title_topics"), value.getString("author"),
+                        value.getInt("quantity_books")));
+            }
+            namebookColumn.setCellValueFactory(new PropertyValueFactory<>("namebook"));
+            topicColumn.setCellValueFactory(new PropertyValueFactory<>("topic"));
+            authorColumn.setCellValueFactory(new PropertyValueFactory<>("author"));
+            quantityColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+            searchTable.setItems(booksObservableList);
+        } catch (Exception e) {
+
+        }
+
+
+        find.setOnAction(new EventHandler<ActionEvent>() {
         @Override
         public void handle(ActionEvent actionEvent) {
             searchTable.getItems().clear();

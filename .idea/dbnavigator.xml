@@ -80,7 +80,12 @@ update public.books
 set quantity_books = quantity_books + 2
 where id = '11'
 
+select * from "public".topics
+
 select * from "public".books
+
+
+delete from "public".readers
 
 select COUNT(*) from "public".books
 where name_books = 'Война и мир' and quantity_books > 0]]></console>
